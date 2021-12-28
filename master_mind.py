@@ -49,7 +49,7 @@ def computer_game(player_guesses):
     target_list = list(str(player_input))
 
     while computer_guessed == False :
-        indices_list = check_num(num1,comp_guess)
+        
         if num1 == '':
             print('Computer wins bhaaga')
             break
@@ -58,8 +58,9 @@ def computer_game(player_guesses):
             break
         
         else :
+            indices_list = check_num(num1,comp_guess)
             for i in indices_list:
-                target_list.remove(target_list[i])
+            target_list.remove(target_list[i])
             
             print(comp_guess)
             print(target_list)
